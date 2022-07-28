@@ -15,8 +15,40 @@ code {
 .cv-form {
   height: 80%;
   border: 2px solid red;
+  padding: 50px;
 }
 .cv-output {
   height: 80%;
   border: 2px solid red;
+  padding: 50px;
+}
+.personal-info-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.personal-info > input {
+  height: 20px;
+}
+
+.experience-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 700px;
+}
+
+.education-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+button {
+  display: flex;
+  width: 50px;
+  height: 25px;
+}
+.buttons {
+  display: flex;
+  width: 100px;
 }

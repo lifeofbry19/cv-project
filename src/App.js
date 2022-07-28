@@ -1,4 +1,12 @@
+import CvOutput from "./components/CvOutput";
+import EducationForm from "./components/EducationForm";
+import ExperienceForm from "./components/ExperienceForm";
+import PersonalInfoForm from "./components/PersonalInfoForm";
+import React, { useState } from "react";
+
 function App() {
+  const [userInput, setUserInput] = useState({});
+
   return (
     <div className="App">
       <header
@@ -25,63 +33,21 @@ function App() {
       >
         <div className="cv-form">
           <form action="">
-            <label htmlFor="personal-info">Personal Information</label>
-            <input type="text" name="" id="" placeholder="Name" />
-            <input type="text" name="" id="" placeholder="Title" />
-            <input type="text" name="" id="" placeholder="Address" />
-            <input type="number" name="" id="" placeholder="Phone Number" />
-            <input type="email" name="" id="" placeholder="Email" />
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="10"
-              placeholder="Description"
-            ></textarea>
+            <PersonalInfoForm userInput={userInput} />
+            <ExperienceForm />
 
-            <label htmlFor="Experience">Experience</label>
-            <input type="text" name="" id="" placeholder="Position" />
-            <input type="text" name="" id="" placeholder="Company" />
-            <input type="text" name="" id="" placeholder="Location" />
-            <label htmlFor="job-start">From</label>
-            <input type="date" name="job-start" id="" />
-            <label htmlFor="job-end">To</label>
-            <input type="date" name="job-end" id="" />
-
-            <label htmlFor="Experience">Education</label>
-            <input type="text" name="" id="" placeholder="University" />
-            <input type="text" name="" id="" placeholder="Location" />
-            <input type="text" name="" id="" placeholder="Degree" />
-            <label htmlFor="school-start">From</label>
-            <input type="date" name="school-start" id="" />
-            <label htmlFor="school-end">To</label>
-            <input type="date" name="school-end" id="" />
+            <EducationForm />
 
             <input type="submit" value="Generate PDF" />
           </form>
         </div>
 
-        <div className="cv-output">
-          <div className="cv-header">
-            <h2>firstname lastname</h2>
-            <h3>title</h3>
-            <p>number</p>
-            <p>email</p>
-            <p>location</p>
-          </div>
-          <div className="description">
-            this is a place for an about me section, why i want the job etc
-          </div>
-          <div className="work-experience">
-            my previous companies, title, etc
-          </div>
-          <div className="education-experience">my degrees, name, etc</div>
-        </div>
+        <CvOutput />
       </div>
       <footer
         style={{
           position: "absolute",
-          bottom: "0",
+          bottom: "-50%",
           height: "30px",
           width: "100%",
           color: "white",
