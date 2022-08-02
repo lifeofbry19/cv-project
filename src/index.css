@@ -7,19 +7,46 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+header {
+  position: absolute;
+  top: 0;
+  height: 50px;
+  background-color: rgb(73, 73, 73);
+  width: 100%;
+  color: white;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+footer {
+  position: absolute;
+  bottom: -50%;
+  height: 30px;
+  width: 100%;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: 1400px;
+  margin-top: 50px;
+}
 
 .cv-form {
   height: 80%;
-  border: 2px solid red;
+
   padding: 50px;
 }
 .cv-output {
   height: 80%;
-  border: 2px solid red;
+
   padding: 50px;
 }
 .personal-info-form {

@@ -3,62 +3,82 @@ import EducationForm from "./components/EducationForm";
 import ExperienceForm from "./components/ExperienceForm";
 import PersonalInfoForm from "./components/PersonalInfoForm";
 import React, { useState } from "react";
+import AddExperienceButton from "./components/AddExperienceButton";
+import AddEducationButton from "./components/AddEducationButton";
 
 function App() {
-  const [userInput, setUserInput] = useState({});
+  const [personalInfo, setPersonalInfo] = useState({});
+
+  const [workExperience, setWorkExperience] = useState([
+    { position: "", company: "", location: "", from: "", to: "", id: 0 },
+  ]);
+  const [educationExperience, setEducationExperience] = useState([
+    { university: "", location: "", degree: "", from: "", to: "", id: 0 },
+  ]);
+  /* const deleteForm = (type, id) => {
+    e.preventDefault();
+    if (type === "experience") {
+      setWorkExperience((prevVal) => {
+        const newExpForms = prevVal.filter((obj) => obj.id !== id);
+        return newExpForms;
+      });
+    } else if (type === 'education'){
+      setEducationExperience((prevVal))
+    }
+  }; */
+  const experienceFormComponents = workExperience.map((obj) => {
+    return (
+      <ExperienceForm
+        key={obj.id}
+        id={obj.id}
+        workExperience={workExperience}
+        setWorkExperience={setWorkExperience}
+      />
+    );
+  });
+
+  const educationFormComponents = educationExperience.map((obj) => {
+    return (
+      <EducationForm
+        key={obj.id}
+        id={obj.id}
+        educationExperience={educationExperience}
+        setEducationExperience={setEducationExperience}
+      />
+    );
+  });
 
   return (
     <div className="App">
-      <header
-        style={{
-          position: "absolute",
-          top: "0",
-          height: "50px",
-          backgroundColor: "darkgray",
-          width: "100%",
-          color: "white",
-        }}
-      >
-        CV Creator
-      </header>
-      <div
-        className="main-container"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gridTemplateRows: "1fr",
-          height: "1400px",
-          marginTop: "50px",
-        }}
-      >
+      <header>CV Creator</header>
+      <div className="main-container">
         <div className="cv-form">
           <form action="">
-            <PersonalInfoForm userInput={userInput} />
-            <ExperienceForm />
-
-            <EducationForm />
+            <PersonalInfoForm
+              personalInfo={personalInfo}
+              setPersonalInfo={setPersonalInfo}
+            />
+            {experienceFormComponents}
+            <AddExperienceButton
+              workExperience={workExperience}
+              setWorkExperience={setWorkExperience}
+            />
+            {educationFormComponents}
+            <AddEducationButton
+              educationExperience={educationExperience}
+              setEducationExperience={setEducationExperience}
+            />
 
             <input type="submit" value="Generate PDF" />
           </form>
         </div>
 
-        <CvOutput />
+        <CvOutput
+          personalInfo={personalInfo}
+          workExperience={workExperience}
+          educationExperience={educationExperience}
+        />
       </div>
-      <footer
-        style={{
-          position: "absolute",
-          bottom: "-50%",
-          height: "30px",
-          width: "100%",
-          color: "white",
-          backgroundColor: "black",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        Created by Bryant Young
-      </footer>
     </div>
   );
 }
