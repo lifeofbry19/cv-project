@@ -32,9 +32,9 @@ const EducationForm = ({ educationExperience, setEducationExperience, id }) => {
       />
       <input
         type="text"
-        name="location"
+        name="description"
         id=""
-        placeholder="Location"
+        placeholder="Description (optional)"
         onChange={handleInputChange}
       />
       <input
@@ -45,9 +45,21 @@ const EducationForm = ({ educationExperience, setEducationExperience, id }) => {
         onChange={handleInputChange}
       />
       <label htmlFor="start">From</label>
-      <input type="date" name="start" id="" onChange={handleInputChange} />
+      <input
+        type="text"
+        placeholder="Start Date"
+        name="start"
+        id=""
+        onChange={handleInputChange}
+      />
       <label htmlFor="end">To</label>
-      <input type="date" name="end" id="" onChange={handleInputChange} />
+      <input
+        type="text"
+        name="end"
+        placeholder="End Date"
+        id=""
+        onChange={handleInputChange}
+      />
       <div className="buttons">
         <button onClick={handleDelete}>Delete</button>
       </div>

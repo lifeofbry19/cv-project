@@ -10,10 +10,10 @@ function App() {
   const [personalInfo, setPersonalInfo] = useState({});
 
   const [workExperience, setWorkExperience] = useState([
-    { position: "", company: "", location: "", from: "", to: "", id: 0 },
+    { position: "", description: "", company: "", from: "", to: "", id: 0 },
   ]);
   const [educationExperience, setEducationExperience] = useState([
-    { university: "", location: "", degree: "", from: "", to: "", id: 0 },
+    { university: "", description: "", degree: "", from: "", to: "", id: 0 },
   ]);
   /* const deleteForm = (type, id) => {
     e.preventDefault();
@@ -51,6 +51,7 @@ function App() {
   return (
     <div className="App">
       <header>CV Creator</header>
+
       <div className="main-container">
         <div className="cv-form">
           <form action="">

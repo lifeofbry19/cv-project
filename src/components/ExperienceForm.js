@@ -39,19 +39,32 @@ const ExperienceForm = ({ workExperience, setWorkExperience, id }) => {
         placeholder="Company"
         onChange={handleInputChange}
       />
+      <textarea
+        name="description"
+        id=""
+        cols="30"
+        rows="10"
+        placeholder="Description"
+        onChange={handleInputChange}
+      ></textarea>
+
+      <label htmlFor="start">From</label>
       <input
         type="text"
-        name="location"
+        name="start"
         id=""
-        placeholder="Location"
+        placeholder="Start Date"
         onChange={handleInputChange}
       />
-      <label htmlFor="start">From</label>
-      <input type="date" name="start" id="" onChange={handleInputChange} />
       <label htmlFor="end">To</label>
-      <input type="date" name="end" id="" onChange={handleInputChange} />
+      <input
+        type="text"
+        name="end"
+        id=""
+        placeholder="End Date"
+        onChange={handleInputChange}
+      />
       <div className="buttons">
-        <div>{id}</div>
         <button onClick={handleDelete}>Delete</button>
       </div>
     </div>
