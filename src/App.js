@@ -15,42 +15,10 @@ function App() {
   const [educationExperience, setEducationExperience] = useState([
     { university: "", description: "", degree: "", from: "", to: "", id: 0 },
   ]);
-  /* const deleteForm = (type, id) => {
-    e.preventDefault();
-    if (type === "experience") {
-      setWorkExperience((prevVal) => {
-        const newExpForms = prevVal.filter((obj) => obj.id !== id);
-        return newExpForms;
-      });
-    } else if (type === 'education'){
-      setEducationExperience((prevVal))
-    }
-  }; */
-  const experienceFormComponents = workExperience.map((obj) => {
-    return (
-      <ExperienceForm
-        key={obj.id}
-        id={obj.id}
-        workExperience={workExperience}
-        setWorkExperience={setWorkExperience}
-      />
-    );
-  });
-
-  const educationFormComponents = educationExperience.map((obj) => {
-    return (
-      <EducationForm
-        key={obj.id}
-        id={obj.id}
-        educationExperience={educationExperience}
-        setEducationExperience={setEducationExperience}
-      />
-    );
-  });
 
   return (
     <div className="App">
-      <header>CV Creator</header>
+      <header>Resume Builder</header>
 
       <div className="main-container">
         <div className="cv-form">
@@ -59,12 +27,30 @@ function App() {
               personalInfo={personalInfo}
               setPersonalInfo={setPersonalInfo}
             />
-            {experienceFormComponents}
+            {workExperience.map((obj) => {
+              return (
+                <ExperienceForm
+                  key={obj.id}
+                  id={obj.id}
+                  workExperience={workExperience}
+                  setWorkExperience={setWorkExperience}
+                />
+              );
+            })}
             <AddExperienceButton
               workExperience={workExperience}
               setWorkExperience={setWorkExperience}
             />
-            {educationFormComponents}
+            {educationExperience.map((obj) => {
+              return (
+                <EducationForm
+                  key={obj.id}
+                  id={obj.id}
+                  educationExperience={educationExperience}
+                  setEducationExperience={setEducationExperience}
+                />
+              );
+            })}
             <AddEducationButton
               educationExperience={educationExperience}
               setEducationExperience={setEducationExperience}

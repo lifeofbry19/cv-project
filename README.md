@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+This is a resume builder app that allows the user to simply input information about their work experience and education and have a nicely styled resume created for them.
+
+The project is built with React and uses CSS for styling.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
