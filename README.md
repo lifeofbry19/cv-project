@@ -2,7 +2,7 @@
 
 This is a resume builder app that allows the user to simply input information about their work experience and education and have a nicely styled resume created for them.
 
-The project is built with React and uses CSS for styling.
+The project is built with React and uses CSS for styling. There is a live demo of the project available to try out [here](https://cv-project-beta.vercel.app/). 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
