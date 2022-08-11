@@ -1,6 +1,6 @@
 import React from "react";
-import ResumeTemplate1 from "../ResumeTemplate1.png";
-import HomeImg from "../HomeImg.jpg";
+import ResumeTemplate1 from "../images/ResumeTemplate1.png";
+import HomeImg from "../images/HomeImg.jpg";
 
 const Home = () => {
   return (
@@ -8,13 +8,12 @@ const Home = () => {
       <nav className="home-header">Resume Builder</nav>
       <div className="welcome-text">
         <h1>Welcome to Resume Builder! This is where you get the job.</h1>
-        <p>
-          A Quick and Easy Way to Create Your Professional Resume. 30+
-          Professional Resume Templates Choose from over thirty modern and
-          professional templates. All of which can be customized to your liking.
-          Fast and Easy to Use Our resume builder lets you easily and quickly
-          create a resume using our resume wizard.
-        </p>
+        <h3>
+          A Quick and Easy Way to Create Your Professional Resume. Select one of
+          our templates and create your professional, nicely-styled resume in
+          minutes. Resume builder is the best place to create your resume. Best
+          of all, it's completely free!
+        </h3>
       </div>
       <div className="home-img-wrapper">
         <img className="home-image" src={HomeImg} alt="" />

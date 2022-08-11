@@ -1,9 +1,9 @@
 import React from "react";
 import EducationOutput from "./EducationOutput";
 import ExperienceOutput from "./ExperienceOutput";
-import PhoneImage from "../PhoneImage.png";
-import MailIcon from "../MailIcon.png";
-import LocationIcon from "../LocationIcon.png";
+import PhoneImage from "../images/PhoneImage.png";
+import MailIcon from "../images/MailIcon.png";
+import LocationIcon from "../images/LocationIcon.png";
 
 const CvOutput = ({ personalInfo, workExperience, educationExperience }) => {
   const workExpComponents = workExperience.map((job) => {

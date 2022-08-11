@@ -13,7 +13,7 @@ const AddExperienceButton = ({ workExperience, setWorkExperience }) => {
           location: "",
           from: "",
           to: "",
-          id: newId,
+          id: Math.random() * 10000,
         },
       ];
     });

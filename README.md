@@ -1,8 +1,10 @@
+# Project Intro
+
+This is a resume builder app that allows the user to select a template resume from the home page and then simply input information about their work experience and education and have a nicely styled resume created for them.
+
+The project is built with React and uses CSS for styling. It also uses React Router to control the routes between pages. In the process of building this app, I improved my ability to manage state in a react app as well as my problem solving abilities overall. There is a live demo of the project available to try out [here](https://cv-project-beta.vercel.app/).
+
 # Getting Started with Create React App
-
-This is a resume builder app that allows the user to simply input information about their work experience and education and have a nicely styled resume created for them.
-
-The project is built with React and uses CSS for styling. There is a live demo of the project available to try out [here](https://cv-project-beta.vercel.app/). 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

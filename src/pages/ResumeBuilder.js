@@ -5,6 +5,8 @@ import PersonalInfoForm from "../components/PersonalInfoForm";
 import React, { useState } from "react";
 import AddExperienceButton from "../components/AddExperienceButton";
 import AddEducationButton from "../components/AddEducationButton";
+import { jsPDF } from "jspdf";
+import html2canvas from "html2canvas";
 
 function ResumeBuilder() {
   const [personalInfo, setPersonalInfo] = useState({});
@@ -15,6 +17,23 @@ function ResumeBuilder() {
   const [educationExperience, setEducationExperience] = useState([
     { university: "", description: "", degree: "", from: "", to: "", id: 0 },
   ]);
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    const PdfInput = document.querySelector(".cv-output");
+    html2canvas(PdfInput, {
+      logging: true,
+      letterRendering: 1,
+      useCORS: true,
+    }).then((canvas) => {
+      const imgWidth = 208;
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      const imgData = canvas.toDataURL("img/png");
+      const pdf = new jsPDF("p", "mm", "a4");
+      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+      pdf.save("resume.pdf");
+    });
+  };
 
   return (
     <div className="App">
@@ -56,7 +75,7 @@ function ResumeBuilder() {
               setEducationExperience={setEducationExperience}
             />
 
-            <input type="submit" value="Generate PDF" />
+            <input type="submit" value="Generate PDF" onClick={handleClick} />
           </form>
         </div>
 

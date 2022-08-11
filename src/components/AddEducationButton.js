@@ -1,4 +1,5 @@
 import React from "react";
+import { uuid } from "uuidv4";
 
 const AddExperienceButton = ({
   educationExperience,
@@ -6,7 +7,6 @@ const AddExperienceButton = ({
 }) => {
   function addEducation(e) {
     e.preventDefault();
-    const newId = educationExperience.length;
     setEducationExperience((prevVal) => {
       return [
         ...prevVal,
@@ -16,7 +16,7 @@ const AddExperienceButton = ({
           degree: "",
           from: "",
           to: "",
-          id: newId,
+          id: Math.random() * 10000,
         },
       ];
     });
