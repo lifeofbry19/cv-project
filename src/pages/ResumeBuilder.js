@@ -7,8 +7,9 @@ import AddExperienceButton from "../components/AddExperienceButton";
 import AddEducationButton from "../components/AddEducationButton";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
+import CvTemplateTwo from "../components/CvTemplateTwo";
 
-function ResumeBuilder() {
+function ResumeBuilder({ templateSelected }) {
   const [personalInfo, setPersonalInfo] = useState({});
 
   const [workExperience, setWorkExperience] = useState([
@@ -34,6 +35,25 @@ function ResumeBuilder() {
       pdf.save("resume.pdf");
     });
   };
+
+  let resumeOutput;
+  if (templateSelected === "1") {
+    resumeOutput = (
+      <CvTemplateTwo
+        personalInfo={personalInfo}
+        workExperience={workExperience}
+        educationExperience={educationExperience}
+      />
+    );
+  } else {
+    resumeOutput = (
+      <CvOutput
+        personalInfo={personalInfo}
+        workExperience={workExperience}
+        educationExperience={educationExperience}
+      />
+    );
+  }
 
   return (
     <div className="App">
@@ -79,11 +99,7 @@ function ResumeBuilder() {
           </form>
         </div>
 
-        <CvOutput
-          personalInfo={personalInfo}
-          workExperience={workExperience}
-          educationExperience={educationExperience}
-        />
+        {resumeOutput}
       </div>
     </div>
   );
