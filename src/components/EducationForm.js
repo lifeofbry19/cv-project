@@ -48,14 +48,14 @@ const EducationForm = ({ educationExperience, setEducationExperience, id }) => {
       <input
         type="text"
         placeholder="Start Date"
-        name="start"
+        name="from"
         id=""
         onChange={handleInputChange}
       />
       <label htmlFor="end">To</label>
       <input
         type="text"
-        name="end"
+        name="to"
         placeholder="End Date"
         id=""
         onChange={handleInputChange}

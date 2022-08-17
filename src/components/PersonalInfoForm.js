@@ -56,7 +56,7 @@ const PersonalInfoForm = ({ personalInfo, setPersonalInfo }) => {
         id=""
         cols="30"
         rows="10"
-        placeholder="Description"
+        placeholder="Personal Bio / Tech Used"
         onChange={handleInput}
         value={personalInfo.description}
       ></textarea>

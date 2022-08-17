@@ -7,7 +7,7 @@ import AddExperienceButton from "../components/AddExperienceButton";
 import AddEducationButton from "../components/AddEducationButton";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
-import CvTemplateTwo from "../components/CvTemplateTwo";
+import CvTemplateTwo from "../components/template-two/CvTemplateTwo";
 
 function ResumeBuilder({ templateSelected }) {
   const [personalInfo, setPersonalInfo] = useState({});

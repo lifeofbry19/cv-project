@@ -4,6 +4,7 @@ import ExperienceOutput from "./ExperienceOutput";
 import PhoneImage from "../images/PhoneImage.png";
 import MailIcon from "../images/MailIcon.png";
 import LocationIcon from "../images/LocationIcon.png";
+import styles from "./CvOutputOne.css";
 
 const CvOutput = ({ personalInfo, workExperience, educationExperience }) => {
   const workExpComponents = workExperience.map((job) => {
@@ -30,17 +31,17 @@ const CvOutput = ({ personalInfo, workExperience, educationExperience }) => {
 
   return (
     <div className="cv-output">
-      <div className="cv-header">
+      <div className={styles["cv-header"]}>
         <h2 className="name-output">
           <strong>
             {personalInfo.name ? personalInfo.name : "Firstname Lastname"}
           </strong>
         </h2>
-        <h3 className="title-output">
+        <h3 className={styles.titleOutput}>
           {personalInfo.title ? personalInfo.title : "Title"}
         </h3>
 
-        <div className="icons">
+        <div className={styles.icons}>
           <p className="number-output">
             <img src={PhoneImage}></img>
             {personalInfo.phone ? personalInfo.phone : "123-456-7890"}
@@ -51,7 +52,7 @@ const CvOutput = ({ personalInfo, workExperience, educationExperience }) => {
           </p>
           <p className="location-output">
             <img src={LocationIcon}></img>
-            {personalInfo.address ? personalInfo.address : "LA, California"}
+            {personalInfo.address ? personalInfo.address : "City, State"}
           </p>
         </div>
       </div>
