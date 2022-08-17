@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./CvTemplateTwo.css";
+import styles from "./CvTemplateTwo.module.css";
 import EducationOutputTwo from "./EducationOutputTwo";
 import ExperienceOutputTwo from "./ExperienceOutputTwo";
 import PhoneImage from "../../images/PhoneImage.png";
@@ -34,37 +34,35 @@ const CvTemplateTwo = ({
   });
 
   return (
-    <div className="cv-output">
-      <div className="cv-header">
-        <div className="name-output">
+    <div className={styles.cvOutput}>
+      <div className={styles.cvHeader}>
+        <div className={styles.nameOutput}>
           <h2>{personalInfo.name ? personalInfo.name : "Your Name Here"} |</h2>
           <h2 style={{ paddingLeft: "10px" }}>
             {" "}
             {personalInfo.title ? personalInfo.title : "Title"}
           </h2>
         </div>
-        <div className="location-number-email">
-          <p className="location">
+        <div className={styles.locationNumberEmail}>
+          <p className={styles.location}>
             {personalInfo.address ? personalInfo.address : "City, State"} |
           </p>
-          <p className="number">
-            {personalInfo.phone ? personalInfo.phone : "123-456-7890"} |
-          </p>
-          <p className="email">
+          <p>{personalInfo.phone ? personalInfo.phone : "123-456-7890"} |</p>
+          <p>
             {personalInfo.email ? personalInfo.email : "SampleEmail@gmail.com"}
           </p>
         </div>
       </div>
-      <h3 className="experience-title">Technologies</h3>
-      <div className="technologies">
+      <h3 className={styles.experienceTitle}>Technologies</h3>
+      <div className={styles.technologies}>
         {personalInfo.description
           ? personalInfo.description
           : "This is a place for a bit about myself and the tech I use"}
       </div>
-      <h3 className="experience-title">Education</h3>
-      <div className="education-experience">{educationComponents}</div>
-      <h3 className="experience-title">Work Experience</h3>
-      <div className="work-experience">{workExpComponents}</div>
+      <h3 className={styles.experienceTitle}>Education</h3>
+      <div className={styles.educationExperience}>{educationComponents}</div>
+      <h3 className={styles.experienceTitle}>Work Experience</h3>
+      <div className={styles.workExperience}>{workExpComponents}</div>
     </div>
   );
 };

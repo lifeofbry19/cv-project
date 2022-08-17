@@ -1,19 +1,19 @@
 import React from "react";
-import styles from "./CvTemplateTwo.css";
+import styles from "./CvTemplateTwo.module.css";
 
 const EducationOutput = ({ school, educationExperience, id }) => {
   return (
-    <div className="education-experience">
-      <h4 className="university-title">
+    <div className={styles.educationExperience}>
+      <h4 className={styles.universityTitle}>
         {school.university ? school.university : "University"}
       </h4>
-      <ul className="degree-list">
+      <ul className={styles.degreeList}>
         <li>
           {school.from ? school.from : "Start"} -{" "}
           {school.to ? school.to : "End"}
         </li>
         <li>{school.degree ? school.degree : "Degree/Certificate Name"}</li>
-        {school.description !== "" ? <li>{school.description}</li> : ""}
+        {school.description ? <li>{school.description}</li> : ""}
       </ul>
     </div>
   );

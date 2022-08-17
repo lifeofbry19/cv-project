@@ -5,7 +5,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
-nav {
+.homeHeader {
   position: absolute;
   top: 0;
   height: 50px;
@@ -24,7 +24,7 @@ nav > h3 {
 nav > h3:hover {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 65%, #ffd0ae 65%);
 }
-.home-page {
+.homePage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,7 +32,7 @@ nav > h3:hover {
   flex-direction: column;
 }
 
-.welcome-text {
+.welcomeText {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,17 +44,17 @@ nav > h3:hover {
   flex-direction: column;
   padding: 50px;
 }
-.welcome-text > h1 {
+.welcomeText > h1 {
   font-size: 50px;
 }
 
-.template-wrapper {
+.templateWrapper {
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
 }
 
-.template-title {
+.templateTitle {
   align-self: center;
   margin: 0;
   width: fit-content;
@@ -68,7 +68,7 @@ nav > h3:hover {
   gap: 50px;
 }
 
-.template-two {
+.templateTwo {
   height: 100px;
   width: 100px;
 }
@@ -86,19 +86,24 @@ nav > h3:hover {
 }
 
 @media only screen and (max-width: 500px) {
-  .welcome-text > h4 {
+  .welcomeText > h4 {
     visibility: hidden;
   }
   nav > h3 {
     font-size: 15px;
   }
-  .welcome-text > h1 {
+  .welcomeText > h1 {
     font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .home-page {
+  .homePage {
     gap: 10%;
+  }
+  .templates {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

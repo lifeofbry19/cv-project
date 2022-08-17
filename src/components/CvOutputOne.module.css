@@ -1,4 +1,4 @@
-.cv-output {
+.cvOutput {
   height: 1000px;
   padding: 50px;
   margin-top: 20px;
@@ -6,7 +6,7 @@
   margin-left: 20px;
   background-color: white;
 }
-.cv-header {
+.cvHeader {
   display: grid;
   grid-template: 55px 60px / 1fr 1fr 1fr;
 
@@ -17,7 +17,7 @@
   border-bottom: 4px solid rgb(59, 59, 100);
   padding-bottom: 10px;
 }
-.name-output {
+.nameOutput {
   grid-area: name;
   display: flex;
   align-items: start;
@@ -47,18 +47,18 @@ img {
   height: 20px;
   width: 20px;
 }
-.number-output {
+.numberOutput {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
-.email-output {
+.emailOutput {
   display: flex;
   gap: 10px;
   align-items: center;
 }
-.location-output {
+.locationOutput {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -70,7 +70,7 @@ img {
   height: 30px;
 }
 
-.experience-title {
+.experienceTitle {
   color: rgb(92, 92, 129);
   margin: 0;
   margin-top: 10px;
@@ -79,29 +79,29 @@ img {
 
 /* Work Experience */
 
-.work-experience {
+.workExperience {
   display: flex;
   flex-direction: column;
 }
-.title-and-dates {
+.titleAndDates {
   display: flex;
   justify-content: space-between;
   color: rgb(87, 87, 87);
 }
-.job-title {
+.jobTitle {
   color: black;
   margin-bottom: 5px;
 }
 .dates {
   margin-bottom: 0;
 }
-.job-description {
+.jobDescription {
   margin: 0;
 }
 
 /* Education */
 
-.degree-and-uni {
+.degreeAndUni {
   display: flex;
   justify-content: space-between;
   color: rgb(87, 87, 87);

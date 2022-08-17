@@ -1,15 +1,16 @@
 import React from "react";
+import styles from "./CvOutputOne.module.css";
 
 const EducationOutput = ({ school, educationExperience, id }) => {
   return (
     <div className="education-experience">
-      <div className="degree-and-uni">
-        <p className="degree">
+      <div className={styles.degreeAndUni}>
+        <p className={styles.degree}>
           <strong>
             {school.degree ? school.degree : "Degree/Certificate Name"}
           </strong>
         </p>
-        <p className="uni">
+        <p className={styles.uni}>
           <strong>
             {school.university ? school.university : "University"} |{" "}
           </strong>

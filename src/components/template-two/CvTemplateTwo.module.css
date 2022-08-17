@@ -1,11 +1,21 @@
-.cv-header {
+.cvOutput {
+  height: 1000px;
+  padding: 50px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: white;
+}
+.cvHeader {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   border: none;
 }
-
-.name-output > h2 {
+.nameOutput {
+  display: flex;
+}
+.nameOutput > h2 {
   display: flex;
   align-items: center;
   font-size: 30px;
@@ -14,23 +24,23 @@
 .technologies {
   margin-top: 10px;
 }
-.location-number-email {
+.locationNumberEmail {
   display: flex;
   gap: 5px;
   font-size: 14px;
 }
-.experience-title {
+.experienceTitle {
   color: rgb(28, 96, 84);
   font-size: 1.1rem;
   margin-top: 15px;
 }
 
-.university-title {
+.universityTitle {
   font-size: 0.9rem;
   margin-bottom: 5px;
   margin-top: 15px;
 }
-.degree-list {
+.degreeList {
   margin-top: 0;
   padding-left: 15px;
 }
@@ -39,8 +49,11 @@
   color: rgb(76, 132, 121);
   margin-top: 5px;
 }
-.job-title {
+.jobTitle {
   font-size: 14px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.jobDescription {
+  margin: 0;
 }

@@ -16,7 +16,7 @@ function ResumeBuilder({ templateSelected }) {
     { position: "", description: "", company: "", from: "", to: "", id: 0 },
   ]);
   const [educationExperience, setEducationExperience] = useState([
-    { university: "", description: "", degree: "", from: "", to: "", id: 0 },
+    { university: "", degree: "", from: "", to: "", id: 0 },
   ]);
 
   const handleClick = (e) => {
