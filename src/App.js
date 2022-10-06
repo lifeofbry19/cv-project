@@ -6,7 +6,6 @@ function App() {
   const [templateSelected, setTemplateSelected] = useState(0);
 
   useEffect(() => {
-    console.log(window.localStorage);
     const templateData = window.localStorage.getItem("templateID");
     if (templateData !== null) {
       setTemplateSelected(JSON.parse(templateData));
@@ -20,7 +19,6 @@ function App() {
         "templateID",
         JSON.stringify(templateSelected)
       );
-      console.log(window.localStorage);
     }
   }, [templateSelected]);
 
